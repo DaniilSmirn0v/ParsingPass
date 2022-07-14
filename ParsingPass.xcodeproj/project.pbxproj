@@ -52,13 +52,69 @@
 		A5163EF72880331E00DA3CBB /* ParsingPass */ = {
 			isa = PBXGroup;
 			children = (
-				A5163EF82880331E00DA3CBB /* AppDelegate.swift */,
-				A5163EFC2880331E00DA3CBB /* MainViewController.swift */,
-				A5163F0C2880343F00DA3CBB /* MainView.swift */,
-				A5163F012880332100DA3CBB /* Assets.xcassets */,
-				A5163F062880332100DA3CBB /* Info.plist */,
+				A5163F13288038EC00DA3CBB /* Sources */,
+				A5163F12288038DD00DA3CBB /* Resources */,
 			);
 			path = ParsingPass;
+			sourceTree = "<group>";
+		};
+		A5163F10288038AC00DA3CBB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A5163F062880332100DA3CBB /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A5163F11288038BA00DA3CBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5163F012880332100DA3CBB /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5163F12288038DD00DA3CBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5163F10288038AC00DA3CBB /* Configuration */,
+				A5163F11288038BA00DA3CBB /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5163F13288038EC00DA3CBB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A5163F162880395700DA3CBB /* Views */,
+				A5163F152880393E00DA3CBB /* Controllers */,
+				A5163F142880392B00DA3CBB /* Application */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A5163F142880392B00DA3CBB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A5163EF82880331E00DA3CBB /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A5163F152880393E00DA3CBB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5163EFC2880331E00DA3CBB /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5163F162880395700DA3CBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5163F0C2880343F00DA3CBB /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ParsingPass/Info.plist;
+				INFOPLIST_FILE = ParsingPass/Resources/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -287,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ParsingPass/Info.plist;
+				INFOPLIST_FILE = ParsingPass/Resources/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
