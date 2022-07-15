@@ -65,22 +65,21 @@ class MainViewController: UIViewController {
         var password: String = ""
         
         let queue = DispatchQueue(label: "parsing", qos: .utility, attributes: .concurrent)
-        queue.async { [weak self] in
-            
-            if self?.parsingIsActive == false {
+        queue.async {
+            if self.parsingIsActive == false {
                 while password != passwordToUnlock {
-                    if self?.parsingIsActive == false {
-                        password = self?.generateBruteForce(password, fromArray: ALLOWED_CHARACTERS) ?? "Error"
+                    if self.parsingIsActive == false {
+                        password = self.generateBruteForce(password, fromArray: ALLOWED_CHARACTERS)
                 
                         DispatchQueue.main.sync {
-                            self?.mainView?.descriptionLabel.text = "Password: - \(password)"
-                            self?.mainView?.passwordActionButton.setTitle("Cancel Parsing", for: .normal)
-                            self?.mainView?.activityIndicator.startAnimating()
+                            self.mainView?.descriptionLabel.text = "Password: - \(password)"
+                            self.mainView?.passwordActionButton.setTitle("Cancel Parsing", for: .normal)
+                            self.mainView?.activityIndicator.startAnimating()
                             if password == passwordToUnlock {
-                                self?.mainView?.passwordActionButton.setTitle("Start Parsing", for: .normal)
-                                self?.mainView?.activityIndicator.stopAnimating()
+                                self.mainView?.passwordActionButton.setTitle("Start Parsing", for: .normal)
+                                self.mainView?.activityIndicator.stopAnimating()
 
-                                self?.parsingIsActive = true
+                                self.parsingIsActive = true
                             }
                         }
                     } else {
@@ -89,9 +88,9 @@ class MainViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.sync {
-                    self?.mainView?.passwordActionButton.setTitle("Start Parsing", for: .normal)
-                    self?.mainView?.descriptionLabel.text = "Password: - \(self?.mainView?.currentPasswordTextField.text ?? "random") not hacked"
-                    self?.mainView?.activityIndicator.stopAnimating()
+                    self.mainView?.passwordActionButton.setTitle("Start Parsing", for: .normal)
+                    self.mainView?.descriptionLabel.text = "Password: - \(self.mainView?.currentPasswordTextField.text ?? "random") not hacked"
+                    self.mainView?.activityIndicator.stopAnimating()
                 }
             }
         }
